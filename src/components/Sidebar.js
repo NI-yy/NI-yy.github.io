@@ -1,6 +1,7 @@
 import React from 'react';
 import pandaLogo from '../img/panda-logo.png';
 import linkedin_icon from '../img/linkedin-icon.png';
+import '../styles/Sidebar.css';
 
 function Sidebar() {
   return (

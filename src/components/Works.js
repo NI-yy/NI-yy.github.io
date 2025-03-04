@@ -1,6 +1,7 @@
 import React from 'react';
 import kick_pop_send from '../img/kick-pop-send.png';
 import rocket_punch from '../img/rocket-punch.png';
+import '../styles/Works.css';
 
 function Works() {
   return (

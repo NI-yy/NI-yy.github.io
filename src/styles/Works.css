@@ -1,0 +1,26 @@
+.works-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .work-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .work-image-container {
+    flex: 0 0 auto;
+    width: 40%;
+    margin-right: 20px;
+  }
+  
+  .work-details {
+    flex: 1 1 auto;
+    width: 40%;
+  }
+  
+  .work-image-container .work-image {
+    width: 100%;
+    height: auto;
+  }
