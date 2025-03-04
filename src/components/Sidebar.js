@@ -7,7 +7,9 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
+      <div className="logo-container">
         <img src={pandaLogo} alt="Panda Logo" className="logo" />
+      </div>
         <span className="sidebar-name">Nozomu Iwai</span>
       </div>
       <nav>
