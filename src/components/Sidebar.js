@@ -5,7 +5,10 @@ import linkedin_icon from '../img/linkedin-icon.png';
 function Sidebar() {
   return (
     <div className="sidebar">
-      <img src={pandaLogo} alt="Panda Logo" className="logo" />
+      <div className="sidebar-header">
+        <img src={pandaLogo} alt="Panda Logo" className="logo" />
+        <span className="sidebar-name">Nozomu Iwai</span>
+      </div>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
