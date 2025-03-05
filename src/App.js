@@ -44,28 +44,30 @@ function App() {
   return (
     <div className="App">
       <Sidebar activeSection={activeSection} />
-      <div className="main-content">
-        <section id="about" ref={(el) => (sectionRefs.current.about = el)}>
-          <Header />
-        </section>
-        <main>
-          <section id="works" ref={(el) => (sectionRefs.current.works = el)}>
-            <Works />
+      <div className="main-content-containar">
+        <div className="main-content">
+          <section id="about" ref={(el) => (sectionRefs.current.about = el)}>
+            <Header />
           </section>
-          <section id="skills" ref={(el) => (sectionRefs.current.skills = el)}>
-            <Skills />
-          </section>
-          <section id="publications" ref={(el) => (sectionRefs.current.publications = el)}>
-            <Publications />
-          </section>
-          <section id="awards" ref={(el) => (sectionRefs.current.awards = el)}>
-            <Awards />
-          </section>
-          <section id="history" ref={(el) => (sectionRefs.current.history = el)}>
-            <History />
-          </section>
-        </main>
-        <Footer />
+          <main>
+            <section id="works" ref={(el) => (sectionRefs.current.works = el)}>
+              <Works />
+            </section>
+            <section id="skills" ref={(el) => (sectionRefs.current.skills = el)}>
+              <Skills />
+            </section>
+            <section id="publications" ref={(el) => (sectionRefs.current.publications = el)}>
+              <Publications />
+            </section>
+            <section id="awards" ref={(el) => (sectionRefs.current.awards = el)}>
+              <Awards />
+            </section>
+            <section id="history" ref={(el) => (sectionRefs.current.history = el)}>
+              <History />
+            </section>
+          </main>
+          <Footer />
+        </div>
       </div>
     </div>
   );

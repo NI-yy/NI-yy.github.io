@@ -1,22 +1,29 @@
 .header-section {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
   }
   
-  .header-section h1 {
-    color: #1a73e8;
-    font-size: 24px;
+  .text-block-1{
+    color: var(--color-navy);
+    font-size: var(--font-size-large);
+    padding: 4px 0;
+  }
+  
+  .text-block-2 {
+    color: var(--color-blue-dark);
+    font-size: var(--font-size-xxlarge);
     font-weight: bold;
   }
   
-  .header-section h2 {
-    color: #444;
-    font-size: 18px;
+  .text-block-3 {
+    color: var(--color-blue-dark);
+    font-size: var(--font-size-xlarge);
+    font-weight: bold;
+    padding: 12px 0;
   }
-  
-  .header-section p {
-    color: #666;
-    font-size: 14px;
-    max-width: 600px;
-    margin: 0 auto;
+
+  .text-block-4 {
+    color: var(--color-navy);
+    font-size: var(--font-size-large);
+    padding: 12px 0;
   }

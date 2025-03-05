@@ -6,6 +6,17 @@ import linkedin_icon from '../img/linkedin-icon.png';
 import '../styles/Sidebar.css';
 
 function Sidebar({ activeSection }) {
+  const handleLogoClick = () => {
+    window.location.href = window.location.pathname; // 現在のパスを再読み込み
+  };
+
+  const handleNavClick = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // スムーズスクロール
+    }
+  };
+
   const navItems = [
     { id: 'about', text: 'About' },
     { id: 'works', text: 'Works' },
@@ -19,7 +30,7 @@ function Sidebar({ activeSection }) {
     <div className="sidebar">
       <div className="sidebar-header">
         <div className="logo-container">
-          <img src={pandaLogo} alt="Panda Logo" className="logo" />
+          <img src={pandaLogo} alt="Panda Logo" className="logo" onClick={handleLogoClick} />
         </div>
         <div className="name-container">
           <span className="sidebar-name">Nozomu Iwai</span>
@@ -28,8 +39,12 @@ function Sidebar({ activeSection }) {
       <nav className="nav-list">
         <ul>
           {navItems.map((item) => (
-            <li key={item.id} className={activeSection === item.id ? 'active' : ''}>
-              <a href={`#${item.id}`}>{item.text}</a>
+            <li
+              key={item.id}
+              className={activeSection === item.id ? 'active' : ''}
+              onClick={() => handleNavClick(item.id)}
+            >
+              {item.text}
             </li>
           ))}
         </ul>
