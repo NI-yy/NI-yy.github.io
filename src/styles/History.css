@@ -1,0 +1,36 @@
+.timeline {
+    position: relative;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .icon.cap {
+    background: url('../img/grad-cap.png') no-repeat center;
+    background-size: contain;
+  }
+  
+  .icon.pin {
+    background: url('../img/location-pin.png') no-repeat center;
+    background-size: contain;
+  }
+  
+  .timeline-item strong {
+    color: #444;
+    margin-right: 10px;
+  }
+  
+  .timeline-item p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+  }

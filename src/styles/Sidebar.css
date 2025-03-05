@@ -1,0 +1,98 @@
+.sidebar {
+width: 300px;
+background-color: #f5f5f5;
+padding: 16px;
+position: fixed;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+box-sizing: border-box;
+top: 0;
+left: 0; /* 常に左端に固定 */
+}
+
+.sidebar-header {
+display: flex;
+flex-direction: column;
+margin-top:  20px;
+margin-bottom: 40px;
+}
+
+.name-container{
+    text-align: center;
+    display: block;
+}
+
+.sidebar-name {
+color: #1a73e8;
+font-size: var(--font-size-xlarge);
+font-weight: bold;
+display: inline-block;
+text-align: left;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* ロゴを中央に配置 */
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.logo {
+width: 130px;
+height: 130px;
+border-radius: 50%;
+}
+
+.nav-list{
+    flex-grow: 1;
+}
+
+.nav-list ul {
+    list-style: none;
+    padding-left: 34.1px; /* パディングをリセット */
+    margin: 0;
+  }
+
+.nav-list ul {
+list-style: none;
+}
+
+.nav-list ul li {
+margin: 0 0;
+padding: 12px 16px 12px 16px;
+}
+
+.nav-list ul li a {
+color: #1a73e8;
+text-decoration: none;
+font-size: var(--font-size-large);
+}
+
+.sidebar nav ul li:hover {
+    background-color: #e0e0e0; /* liがホバーされたときの背景色 */
+}
+
+.sidebar nav ul li.active {
+    background-color: #d3d3d3; /* アクティブなセクションの背景色 */
+}
+
+/* ソーシャルアイコンのスタイルを追加 */
+.social_icons {
+    display: flex; /* 横に並べるためにフレックスボックスを使用 */
+    justify-content: center; /* 横方向に中央揃え */
+    gap: 24px; /* アイコン間の間隔 */
+    margin-top: 10px; /* ナビゲーションリストとの間隔 */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+  .social_icons a {
+    text-decoration: none; /* リンクの下線を削除 */
+  }
+  
+  .social_icons img {
+    width: 24px; /* アイコンのサイズを維持 */
+    height: 24px; /* アイコンのサイズを維持 */
+  }

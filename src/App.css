@@ -3,64 +3,6 @@
   min-height: 100vh;
 }
 
-.sidebar {
-  width: 300px;
-  background-color: #f5f5f5;
-  padding: 10px;
-  position: fixed;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  top: 0;
-  left: 0; /* 常に左端に固定 */
-}
-
-.sidebar-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.sidebar-name {
-  color: #1a73e8;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar nav ul li {
-  margin: 20px 0;
-}
-
-.sidebar nav ul li a {
-  color: #1a73e8;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.sidebar nav ul li a:hover {
-  font-weight: bold;
-}
-
-.linkedin-icon {
-  width: 20px;
-  height: 20px;
-}
-
 /* デフォルトのスタイル（デスクトップとモバイル共通） */
 .main-content {
   margin-left: 300px;
@@ -68,29 +10,6 @@
   background-color: #FBFBFB;
   padding: 20px 24px;
   box-sizing: border-box;
-}
-
-.header-section {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header-section h1 {
-  color: #1a73e8;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.header-section h2 {
-  color: #444;
-  font-size: 18px;
-}
-
-.header-section p {
-  color: #666;
-  font-size: 14px;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 section {
@@ -106,126 +25,10 @@ section h2 {
   padding-bottom: 5px;
 }
 
-.works-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.work-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.work-image-container {
-  flex: 0 0 auto;
-  width: 40%;
-  margin-right: 20px;
-}
-
-.work-details {
-  flex: 1 1 auto;
-  width: 40%;
-}
-
-.work-image-container .work-image {
-  width: 100%;
-  height: auto;
-}
-
-.skills-list {
-  list-style: none;
-  padding: 0;
-}
-
-.skills-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.skills-list li span {
-  width: 100px;
-  color: #1a73e8;
-  font-weight: bold;
-}
-
-.progress-bar {
-  width: 240px;
-  height: 20px;
-  background-color: #d3d3d3;
-}
-
-.progress-fill {
-  height: 100%;
-  background-color: #1a73e8;
-}
-
-.publication-category {
-  margin-bottom: 20px;
-}
-
-.publication-category h3 {
-  color: #444;
-  font-size: 16px;
-}
-
-.publication-category p {
-  color: #666;
-  font-size: 14px;
-}
-
-.awards-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.awards-section ul li {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.timeline {
-  position: relative;
-}
-
-.timeline-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.timeline-item .icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.icon.cap {
-  background: url('img/grad-cap.png') no-repeat center;
-  background-size: contain;
-}
-
-.icon.pin {
-  background: url('img/location-pin.png') no-repeat center;
-  background-size: contain;
-}
-
-.timeline-item strong {
-  color: #444;
-  margin-right: 10px;
-}
-
-.timeline-item p {
-  color: #666;
-  font-size: 14px;
-  margin: 0;
-}
-
-.footer {
-  text-align: center;
-  color: #aaa;
-  font-size: 12px;
-  padding: 20px 0;
+:root {
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+  --font-size-xlarge: 28px;
+  --font-size-xxlarge: 32px;
 }

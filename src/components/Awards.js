@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Awards.css';
 
 function Awards() {
   const awards = [
