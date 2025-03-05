@@ -3,8 +3,12 @@
   min-height: 100vh;
 }
 
-/* デフォルトのスタイル（デスクトップとモバイル共通） */
-.main-content-containar {
+.content-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.main-content-container {
   margin-left: 300px;
   width: 100%;
   background-color: var(--color-white);
@@ -14,7 +18,7 @@
 
 .main-content {
   width: 80%;
-  margin: 0 auto; /* 中央揃えにするために追加 */
+  margin: 0 auto;
 }
 
 section {
@@ -30,13 +34,54 @@ section h2 {
   padding-bottom: 5px;
 }
 
+.hamburger-menu-container {
+  display: none;
+  position: fixed;
+  background-color: var(--color-white);
+  z-index: 1002; /* sidebar-openより下 */
+  width: 100%;
+  height: 60px;
+  border-bottom: 0.7px solid #dcdcdc;
+}
+
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+@media (max-width: 768px) {
+  .main-content-container {
+    padding-top: 70px;
+    margin-left: 0;
+  }
+
+  .hamburger-menu-container {
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+.hamburger-menu img {
+  width: 24px;
+  height: 24px;
+}
+
 :root {
   --font-size-small: 12px;
   --font-size-medium: 16px;
   --font-size-large: 20px;
   --font-size-xlarge: 28px;
   --font-size-xxlarge: 40px;
-
   --color-gray-light: #cecbcc;
   --color-gray-dark: #515561;
   --color-blue-dark: #1f3555;
