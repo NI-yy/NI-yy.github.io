@@ -4,11 +4,15 @@ import '../styles/Header.css';
 function Header() {
   return (
     <section id="about" className="header-section">
-      <h1>Hi, there I am Nozomu Iwai</h1>
-      <h2>Game Developer Engineer</h2>
-      <p>
-        I am a Ph.D. student in the HCI Lab at Hokkaido University, where I am advised by Prof. Daisuke Sakamoto.
-      </p>
+      <div class="text-block-1">Hey there 👋</div>
+      <div class="text-block-2">I'm Nozomu Iwai</div>
+      <div class="text-block-3">Game Developer Engineer</div>
+      <div class="text-block-4">
+        <text class="text-lg">
+        I am a master student in the HCI Lab at Hokkaido University, 
+        where I am advised by Prof. Daisuke Sakamoto.
+        </text>
+      </div>
     </section>
   );
 }

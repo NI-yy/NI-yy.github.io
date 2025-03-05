@@ -4,12 +4,17 @@
 }
 
 /* デフォルトのスタイル（デスクトップとモバイル共通） */
-.main-content {
+.main-content-containar {
   margin-left: 300px;
   width: 100%;
-  background-color: #FBFBFB;
-  padding: 20px 24px;
+  background-color: var(--color-white);
+  padding: 40px 24px 20px 24px;
   box-sizing: border-box;
+}
+
+.main-content {
+  width: 80%;
+  margin: 0 auto; /* 中央揃えにするために追加 */
 }
 
 section {
@@ -30,5 +35,11 @@ section h2 {
   --font-size-medium: 16px;
   --font-size-large: 20px;
   --font-size-xlarge: 28px;
-  --font-size-xxlarge: 32px;
+  --font-size-xxlarge: 40px;
+
+  --color-gray-light: #cecbcc;
+  --color-gray-dark: #515561;
+  --color-blue-dark: #1f3555;
+  --color-navy: #242740;
+  --color-white: #FBFBFB;
 }
