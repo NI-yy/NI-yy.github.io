@@ -1,101 +1,158 @@
 .sidebar {
-width: 300px;
-background-color: var(--color-gray-light);
-padding: 16px;
-position: fixed;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-box-sizing: border-box;
-top: 0;
-left: 0; /* 常に左端に固定 */
-}
-
-.sidebar-header {
-display: flex;
-flex-direction: column;
-margin-top:  20px;
-margin-bottom: 40px;
-}
-
-.name-container{
+    width: 300px;
+    background-color: var(--color-gray-light);
+    padding: 16px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* sidebar-openより下 */
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar-open {
+    width: 300px;
+    background-color: var(--color-gray-light);
+    padding: 16px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 1001; /* sidebarより上 */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-open.open {
+    transform: translateX(0); /* 開いた状態 */
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #35353561;
+    z-index: 999; /* sidebarより下、コンテンツより上 */
+  }
+  
+  .sidebar-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .name-container {
     text-align: center;
     display: block;
-}
-
-.sidebar-name {
-color: var(--color-blue-dark);
-font-size: var(--font-size-xlarge);
-font-weight: bold;
-display: inline-block;
-text-align: left;
-}
-
-.logo-container {
+  }
+  
+  .sidebar-name {
+    color: var(--color-blue-dark);
+    font-size: var(--font-size-xlarge);
+    font-weight: bold;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .logo-container {
     display: flex;
-    justify-content: center; /* ロゴを中央に配置 */
+    justify-content: center;
     width: 100%;
     margin-bottom: 10px;
-}
-
-.logo {
-width: 130px;
-height: 130px;
-border-radius: 50%;
-cursor: pointer; /* クリック可能なカーソル */
-transition: transform 0.3s ease; /* 拡大縮小のスムーズなトランジション */
-}
-
-.logo:hover {
-    transform: scale(1.1); /* ホバー時に1.1倍（10%）大きくする */
   }
-
-.nav-list{
+  
+  .logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-list {
+    padding-top: 65px;
     flex-grow: 1;
-}
-
-.nav-list ul {
+  }
+  
+  .nav-list ul {
     list-style: none;
-    padding-left: 34.1px; /* パディングをリセット */
+    padding-left: 34.1px;
     margin: 0;
   }
-
-.nav-list ul {
-list-style: none;
-}
-
-.nav-list ul li {
-margin: 0 0;
-padding: 12px 16px 12px 16px;
-color: var(--color-navy);
-font-size: var(--font-size-large);
-cursor: pointer;
-}
-
-.sidebar nav ul li:hover {
-    background-color: #d3d3d3; /* liがホバーされたときの背景色 */
-}
-
-.sidebar nav ul li.active {
-    background-color: #e0e0e0; /* アクティブなセクションの背景色 */
-}
-
-/* ソーシャルアイコンのスタイルを追加 */
-.social_icons {
-    display: flex; /* 横に並べるためにフレックスボックスを使用 */
-    justify-content: center; /* 横方向に中央揃え */
-    gap: 24px; /* アイコン間の間隔 */
-    margin-top: 10px; /* ナビゲーションリストとの間隔 */
+  
+  .nav-list ul li {
+    margin: 0;
+    padding: 12px 16px;
+    color: var(--color-navy);
+    font-size: var(--font-size-large);
+    cursor: pointer;
+  }
+  
+  .nav-list ul li:hover {
+    background-color: #d3d3d3;
+  }
+  
+  .nav-list ul li.active {
+    background-color: #e0e0e0;
+  }
+  
+  .social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-}
+  }
   
   .social_icons a {
-    text-decoration: none; /* リンクの下線を削除 */
+    text-decoration: none;
   }
   
   .social_icons img {
-    width: 24px; /* アイコンのサイズを維持 */
-    height: 24px; /* アイコンのサイズを維持 */
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* モバイル表示 */
+  @media (max-width: 768px) {
+    .sidebar {
+      transform: translateX(-100%);
+    }
+    .sidebar-open {
+      transform: translateX(-100%);
+    }
+    .sidebar-open.open {
+      transform: translateX(0);
+    }
+  }
+  
+  /* デスクトップ表示 */
+  @media (min-width: 769px) {
+    .sidebar {
+      transform: translateX(0); /* 常に表示 */
+    }
+    .sidebar-open {
+      transform: translateX(-100%); /* 隠れる */
+    }
   }

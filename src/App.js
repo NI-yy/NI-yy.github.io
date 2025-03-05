@@ -8,9 +8,12 @@ import Awards from './components/Awards';
 import History from './components/History';
 import Footer from './components/Footer';
 import { useState, useEffect, useRef } from 'react';
+import linkedin_icon from './img/linkedin-icon.png';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('about'); // デフォルトでAboutをアクティブ
+  const [activeSection, setActiveSection] = useState('about');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const sidebarRef = useRef(null);
   const sectionRefs = useRef({
     about: null,
     works: null,
@@ -22,13 +25,11 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100; // 少し余裕を持たせる（ヘッダー分や視覚的調整）
-
+      const scrollPosition = window.scrollY + 100;
       for (const [section, ref] of Object.entries(sectionRefs.current)) {
         if (ref) {
           const offsetTop = ref.offsetTop;
           const offsetBottom = offsetTop + ref.offsetHeight;
-
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
             setActiveSection(section);
             break;
@@ -38,35 +39,75 @@ function App() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll); // クリーンアップ
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    const handleResizeStart = () => {
+      if (sidebarRef.current) {
+        sidebarRef.current.style.transition = 'none'; // アニメーション無効化
+      }
+    };
+
+    const handleResizeEnd = () => {
+      if (sidebarRef.current) {
+        sidebarRef.current.style.transition = ''; // アニメーション復元
+      }
+    };
+
+    let resizeTimer;
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      handleResizeStart();
+      resizeTimer = setTimeout(handleResizeEnd, 200);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <div className="App">
-      <Sidebar activeSection={activeSection} />
-      <div className="main-content-containar">
-        <div className="main-content">
-          <section id="about" ref={(el) => (sectionRefs.current.about = el)}>
-            <Header />
-          </section>
-          <main>
-            <section id="works" ref={(el) => (sectionRefs.current.works = el)}>
-              <Works />
+      <Sidebar
+        activeSection={activeSection}
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+        ref={sidebarRef}
+      />
+      <div className="content-wrapper">
+        <div className="hamburger-menu-container">
+          <button className="hamburger-menu" onClick={toggleMenu}>
+            <img src={linkedin_icon} alt="LinkedIn" className="icon-test" />
+          </button>
+        </div>
+        <div className="main-content-container">
+          <div className="main-content">
+            <section id="about" ref={(el) => (sectionRefs.current.about = el)}>
+              <Header />
             </section>
-            <section id="skills" ref={(el) => (sectionRefs.current.skills = el)}>
-              <Skills />
-            </section>
-            <section id="publications" ref={(el) => (sectionRefs.current.publications = el)}>
-              <Publications />
-            </section>
-            <section id="awards" ref={(el) => (sectionRefs.current.awards = el)}>
-              <Awards />
-            </section>
-            <section id="history" ref={(el) => (sectionRefs.current.history = el)}>
-              <History />
-            </section>
-          </main>
-          <Footer />
+            <main>
+              <section id="works" ref={(el) => (sectionRefs.current.works = el)}>
+                <Works />
+              </section>
+              <section id="skills" ref={(el) => (sectionRefs.current.skills = el)}>
+                <Skills />
+              </section>
+              <section id="publications" ref={(el) => (sectionRefs.current.publications = el)}>
+                <Publications />
+              </section>
+              <section id="awards" ref={(el) => (sectionRefs.current.awards = el)}>
+                <Awards />
+              </section>
+              <section id="history" ref={(el) => (sectionRefs.current.history = el)}>
+                <History />
+              </section>
+            </main>
+            <Footer />
+          </div>
         </div>
       </div>
     </div>

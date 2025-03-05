@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import pandaLogo from '../img/panda-logo.png';
 import github_icon from '../img/github-icon.png';
 import x_icon from '../img/x-icon.png';
 import linkedin_icon from '../img/linkedin-icon.png';
 import '../styles/Sidebar.css';
 
-function Sidebar({ activeSection }) {
+const Sidebar = forwardRef(({ activeSection, isMenuOpen, toggleMenu }, ref) => {
   const handleLogoClick = () => {
-    window.location.href = window.location.pathname; // 現在のパスを再読み込み
+    window.location.href = window.location.pathname;
   };
 
   const handleNavClick = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' }); // スムーズスクロール
+      element.scrollIntoView({ behavior: 'smooth' });
+      toggleMenu();
     }
   };
 
@@ -27,41 +28,80 @@ function Sidebar({ activeSection }) {
   ];
 
   return (
-    <div className="sidebar">
-      <div className="sidebar-header">
-        <div className="logo-container">
-          <img src={pandaLogo} alt="Panda Logo" className="logo" onClick={handleLogoClick} />
+    <>
+      {/* 通常のサイドバー */}
+      <div className={`sidebar ${isMenuOpen ? 'closed' : ''}`} ref={ref}>
+        <div className="sidebar-header">
+          <div className="logo-container">
+            <img
+              src={pandaLogo}
+              alt="Panda Logo"
+              className="logo"
+              onClick={handleLogoClick}
+            />
+          </div>
+          <div className="name-container">
+            <span className="sidebar-name">Nozomu Iwai</span>
+          </div>
         </div>
-        <div className="name-container">
-          <span className="sidebar-name">Nozomu Iwai</span>
+        <nav className="nav-list">
+          <ul>
+            {navItems.map((item) => (
+              <li
+                key={item.id}
+                className={activeSection === item.id ? 'active' : ''}
+                onClick={() => handleNavClick(item.id)}
+              >
+                {item.text}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="social_icons">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src={github_icon} alt="Github" className="linkedin-icon" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src={x_icon} alt="X" className="linkedin-icon" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src={linkedin_icon} alt="LinkedIn" className="linkedin-icon" />
+          </a>
         </div>
       </div>
-      <nav className="nav-list">
-        <ul>
-          {navItems.map((item) => (
-            <li
-              key={item.id}
-              className={activeSection === item.id ? 'active' : ''}
-              onClick={() => handleNavClick(item.id)}
-            >
-              {item.text}
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className="social_icons">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src={github_icon} alt="Github" className="linkedin-icon" />
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src={x_icon} alt="X" className="linkedin-icon" />
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src={linkedin_icon} alt="LinkedIn" className="linkedin-icon" />
-        </a>
+
+      {/* ハンバーガーメニューが開いた時のサイドバー */}
+      <div className={`sidebar-open ${isMenuOpen ? 'open' : ''}`}>
+        <nav className="nav-list">
+          <ul>
+            {navItems.map((item) => (
+              <li
+                key={item.id}
+                className={activeSection === item.id ? 'active' : ''}
+                onClick={() => handleNavClick(item.id)}
+              >
+                {item.text}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="social_icons">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src={github_icon} alt="Github" className="linkedin-icon" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src={x_icon} alt="X" className="linkedin-icon" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src={linkedin_icon} alt="LinkedIn" className="linkedin-icon" />
+          </a>
+        </div>
       </div>
-    </div>
+
+      {/* オーバーレイ */}
+      {isMenuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
+    </>
   );
-}
+});
 
 export default Sidebar;
