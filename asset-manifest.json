@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.3860d301.css",
-    "main.js": "/static/js/main.c586a8a7.js",
+    "main.css": "/static/css/main.c18e0406.css",
+    "main.js": "/static/js/main.ec30df40.js",
     "static/media/kick-pop-send.png": "/static/media/kick-pop-send.db97106aa0785fc8cdc7.png",
     "static/media/rocket-punch.png": "/static/media/rocket-punch.96f0f5257124398aec21.png",
     "static/media/panda-logo.png": "/static/media/panda-logo.490abf814b4728bf95d2.png",
     "static/media/x-icon.png": "/static/media/x-icon.c9d69acfaf852c0ddb71.png",
     "static/media/linkedin-icon.png": "/static/media/linkedin-icon.85f850a54081a1da6c97.png",
     "index.html": "/index.html",
-    "main.3860d301.css.map": "/static/css/main.3860d301.css.map",
-    "main.c586a8a7.js.map": "/static/js/main.c586a8a7.js.map"
+    "main.c18e0406.css.map": "/static/css/main.c18e0406.css.map",
+    "main.ec30df40.js.map": "/static/js/main.ec30df40.js.map"
   },
   "entrypoints": [
-    "static/css/main.3860d301.css",
-    "static/js/main.c586a8a7.js"
+    "static/css/main.c18e0406.css",
+    "static/js/main.ec30df40.js"
   ]
 }
