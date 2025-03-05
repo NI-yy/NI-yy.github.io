@@ -1,30 +1,50 @@
 import React from 'react';
 import pandaLogo from '../img/panda-logo.png';
+import github_icon from '../img/github-icon.png';
+import x_icon from '../img/x-icon.png';
 import linkedin_icon from '../img/linkedin-icon.png';
 import '../styles/Sidebar.css';
 
-function Sidebar() {
+function Sidebar({ activeSection }) {
+  const navItems = [
+    { id: 'about', text: 'About' },
+    { id: 'works', text: 'Works' },
+    { id: 'skills', text: 'Skills' },
+    { id: 'publications', text: 'Publications' },
+    { id: 'awards', text: 'Awards' },
+    { id: 'history', text: 'History' },
+  ];
+
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-      <div className="logo-container">
-        <img src={pandaLogo} alt="Panda Logo" className="logo" />
+        <div className="logo-container">
+          <img src={pandaLogo} alt="Panda Logo" className="logo" />
+        </div>
+        <div className="name-container">
+          <span className="sidebar-name">Nozomu Iwai</span>
+        </div>
       </div>
-        <span className="sidebar-name">Nozomu Iwai</span>
-      </div>
-      <nav>
+      <nav className="nav-list">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#awards">Awards</a></li>
-          <li><a href="#history">History</a></li>
+          {navItems.map((item) => (
+            <li key={item.id} className={activeSection === item.id ? 'active' : ''}>
+              <a href={`#${item.id}`}>{item.text}</a>
+            </li>
+          ))}
         </ul>
       </nav>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-        <img src={linkedin_icon} alt="LinkedIn" className="linkedin-icon" />
-      </a>
+      <div className="social_icons">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src={github_icon} alt="Github" className="linkedin-icon" />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src={x_icon} alt="X" className="linkedin-icon" />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src={linkedin_icon} alt="LinkedIn" className="linkedin-icon" />
+        </a>
+      </div>
     </div>
   );
 }

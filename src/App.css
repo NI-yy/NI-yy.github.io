@@ -24,3 +24,11 @@ section h2 {
   border-bottom: 1px solid #d3d3d3;
   padding-bottom: 5px;
 }
+
+:root {
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+  --font-size-xlarge: 28px;
+  --font-size-xxlarge: 32px;
+}
