@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b54fee3.css",
-    "main.js": "/static/js/main.1167e616.js",
+    "main.css": "/static/css/main.db1176be.css",
+    "main.js": "/static/js/main.8273d88b.js",
+    "static/media/check-in-dash.png": "/static/media/check-in-dash.fab515e75f07a7201f80.png",
+    "static/media/furufuru-gamman-splash.png": "/static/media/furufuru-gamman-splash.fc5777309b1c5c4ceb0f.png",
+    "static/media/patchwork-space-escape.png": "/static/media/patchwork-space-escape.d17c8f8098443ab6302c.png",
     "static/media/kick-pop-send.png": "/static/media/kick-pop-send.db97106aa0785fc8cdc7.png",
-    "static/media/rocket-punch.png": "/static/media/rocket-punch.96f0f5257124398aec21.png",
+    "static/media/junkalchemist.png": "/static/media/junkalchemist.b30ed7a630176e2ae440.png",
+    "static/media/Visity.png": "/static/media/Visity.5513e92b931951d43871.png",
+    "static/media/rocket-punch.png": "/static/media/rocket-punch.4861bb045599d1af5a20.png",
     "static/media/panda-logo.png": "/static/media/panda-logo.490abf814b4728bf95d2.png",
     "static/media/x-icon.png": "/static/media/x-icon.c9d69acfaf852c0ddb71.png",
     "static/media/linkedin-icon.png": "/static/media/linkedin-icon.85f850a54081a1da6c97.png",
     "index.html": "/index.html",
-    "main.9b54fee3.css.map": "/static/css/main.9b54fee3.css.map",
-    "main.1167e616.js.map": "/static/js/main.1167e616.js.map"
+    "main.db1176be.css.map": "/static/css/main.db1176be.css.map",
+    "main.8273d88b.js.map": "/static/js/main.8273d88b.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b54fee3.css",
-    "static/js/main.1167e616.js"
+    "static/css/main.db1176be.css",
+    "static/js/main.8273d88b.js"
   ]
 }
