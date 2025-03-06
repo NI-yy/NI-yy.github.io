@@ -36,7 +36,7 @@
 }
 
 /*意図しないpaddingが存在していたので明示的に消去*/
-.MuiContainer-root.MuiContainer-maxWidthLg.css-5c1adp-MuiContainer-root{
+.MuiContainer-root.MuiContainer-maxWidthLg{
   padding: 0;
 }
 
