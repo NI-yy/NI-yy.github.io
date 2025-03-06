@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   
   .name-container {
@@ -64,8 +64,8 @@
   
   .sidebar-name {
     color: var(--color-blue-dark);
-    font-size: var(--font-size-xlarge);
-    font-weight: bold;
+    font-size: var(--font-size-large);
+
     display: inline-block;
     text-align: left;
   }
@@ -90,14 +90,14 @@
   }
   
   .nav-list {
-    padding-top: 65px;
+    padding-top: 5px;
     flex-grow: 1;
   }
   
   .nav-list ul {
     list-style: none;
-    padding-left: 34.1px;
-    margin: 0;
+    padding-left: 0px;
+    cursor: pointer;
   }
   
   .nav-list ul li {
@@ -105,7 +105,7 @@
     padding: 12px 16px;
     color: var(--color-navy);
     font-size: var(--font-size-large);
-    cursor: pointer;
+    
   }
   
   .nav-list ul li:hover {
@@ -127,6 +127,7 @@
   
   .social_icons a {
     text-decoration: none;
+    cursor: pointer;
   }
   
   .social_icons img {
@@ -135,7 +136,7 @@
   }
   
   /* モバイル表示 */
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .sidebar {
       transform: translateX(-100%);
     }
@@ -148,7 +149,7 @@
   }
   
   /* デスクトップ表示 */
-  @media (min-width: 769px) {
+  @media (min-width: 1001px) {
     .sidebar {
       transform: translateX(0); /* 常に表示 */
     }

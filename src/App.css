@@ -1,9 +1,10 @@
 .App {
-  display: flex;
+  
   min-height: 100vh;
 }
 
 .content-wrapper {
+  display: flex;
   width: 100%;
   position: relative;
 }
@@ -37,10 +38,11 @@ section h2 {
 .hamburger-menu-container {
   display: none;
   position: fixed;
+  padding: 8px;
   background-color: var(--color-white);
   z-index: 1002; /* sidebar-openより下 */
   width: 100%;
-  height: 60px;
+  height: 42px;
   border-bottom: 0.7px solid #dcdcdc;
 }
 
@@ -56,7 +58,17 @@ section h2 {
   z-index: 1002;
 }
 
-@media (max-width: 768px) {
+.burger-icon-container{
+  padding-top: 3px;
+  padding-left: 8px;
+}
+
+.burger.burger-squeeze .burger-lines, .burger.burger-squeeze .burger-lines:after, .burger.burger-squeeze .burger-lines:before {
+  background-color: var(--color-navy);
+}
+
+
+@media (max-width: 1000px) {
   .main-content-container {
     padding-top: 70px;
     margin-left: 0;
@@ -87,4 +99,6 @@ section h2 {
   --color-blue-dark: #1f3555;
   --color-navy: #242740;
   --color-white: #FBFBFB;
+
+  --responsive-threshold: 1000px;
 }
