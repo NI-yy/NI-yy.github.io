@@ -93,6 +93,10 @@
     padding-top: 5px;
     flex-grow: 1;
   }
+
+  .sidebar-open .nav-list {
+    padding-top: 50px;
+  }
   
   .nav-list ul {
     list-style: none;
