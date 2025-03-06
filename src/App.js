@@ -1,4 +1,3 @@
-import './App.css';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Works from './components/Works';
@@ -9,6 +8,11 @@ import History from './components/History';
 import Footer from './components/Footer';
 import { useState, useEffect, useRef } from 'react';
 import linkedin_icon from './img/linkedin-icon.png';
+// React Component
+import Burger from '@animated-burgers/burger-squeeze' 
+// don't forget the styles
+import '@animated-burgers/burger-squeeze/dist/styles.css' 
+import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
@@ -80,9 +84,9 @@ function App() {
       />
       <div className="content-wrapper">
         <div className="hamburger-menu-container">
-          <button className="hamburger-menu" onClick={toggleMenu}>
-            <img src={linkedin_icon} alt="LinkedIn" className="icon-test" />
-          </button>
+          <div className="burger-icon-container">
+          <Burger onClick={toggleMenu} className={`${isMenuOpen ? 'open' : ''}`} />
+          </div>
         </div>
         <div className="main-content-container">
           <div className="main-content">
