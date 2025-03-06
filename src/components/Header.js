@@ -34,6 +34,7 @@ function Header() {
       <div class="text-block-4">
       <text className="text-lg">
       こんにちは、北海道大学 大学院情報科学院 修士1年の岩井望です。<br />
+      y_yというユーザネームをよく使います。<br />
       <br />
       <a href="https://x.com/gamma_game_com" className="gamma-link">
         北大ゲーム開発コミュニティGamma
