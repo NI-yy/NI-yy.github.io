@@ -135,7 +135,7 @@
   }
   
   /* モバイル表示 */
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .sidebar {
       transform: translateX(-100%);
     }
@@ -148,7 +148,7 @@
   }
   
   /* デスクトップ表示 */
-  @media (min-width: 769px) {
+  @media (min-width: 1001px) {
     .sidebar {
       transform: translateX(0); /* 常に表示 */
     }

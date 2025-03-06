@@ -57,7 +57,7 @@ section h2 {
   z-index: 1002;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .main-content-container {
     padding-top: 70px;
     margin-left: 0;
@@ -88,4 +88,6 @@ section h2 {
   --color-blue-dark: #1f3555;
   --color-navy: #242740;
   --color-white: #FBFBFB;
+
+  --responsive-threshold: 1000px;
 }

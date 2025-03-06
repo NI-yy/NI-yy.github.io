@@ -14,7 +14,9 @@ const Sidebar = forwardRef(({ activeSection, isMenuOpen, toggleMenu }, ref) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      toggleMenu();
+      if (isMenuOpen) {
+        toggleMenu();
+      }
     }
   };
 
