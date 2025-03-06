@@ -3,6 +3,8 @@
     margin-bottom: 20px;
   }
   
+
+  
   .text-block-1{
     color: var(--color-navy);
     font-size: var(--font-size-large);
@@ -26,4 +28,8 @@
     color: var(--color-navy);
     font-size: var(--font-size-large);
     padding: 12px 0;
+  }
+  
+  .gamma-link{
+    color: var(--color-gray-dark);
   }
