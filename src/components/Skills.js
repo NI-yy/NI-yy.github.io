@@ -15,13 +15,12 @@ import '../styles/Skills.css';
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function Skills() {
-  const maxYear = 5;
 
   const skills = [
     { name: 'Unity/C#', level: 80 , explain : '仕事や研究, 個人開発(〜4年)'},
     { name: 'Python', level: 60 , explain : '研究や個人開発, 競プロ(〜3年)'},
     { name: 'Arduino', level: 40 , explain : '研究や個人開発(〜2年)'},
-    { name: 'Blender', level: 40 , explain : '趣味(〜2年)'},
+    { name: 'Blender', level: 30 , explain : '趣味(〜2年)'},
     { name: 'HTML/CSS', level: 20 , explain : '個人開発(〜1年)'},
   ];
 
