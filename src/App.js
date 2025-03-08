@@ -7,7 +7,6 @@ import Awards from './components/Awards';
 import History from './components/History';
 import Footer from './components/Footer';
 import { useState, useEffect, useRef } from 'react';
-import linkedin_icon from './img/linkedin-icon.png';
 // React Component
 import Burger from '@animated-burgers/burger-squeeze' 
 // don't forget the styles

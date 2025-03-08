@@ -4,7 +4,8 @@ import '../styles/Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      <p>Nozomu Iwai. This page was inspired by manuelerrigitto.github.io, and a few personal pages I came across.</p>
+      <p>@ 2025 Nozomu Iwai</p>
+      <p>This page was inspired by <a href="https://github.com/manuelernestog/manuelernestog.github.io"><span className="url-text">manuelerrigitto.github.io</span></a> and the personal pages of some of my lab mates.</p>
     </footer>
   );
 }
