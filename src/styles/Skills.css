@@ -1,27 +1,5 @@
-.skills-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .skills-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .skills-list li span {
-    width: 100px;
-    color: #1a73e8;
-    font-weight: bold;
-  }
-  
-  .progress-bar {
-    width: 240px;
-    height: 20px;
-    background-color: #d3d3d3;
-  }
-  
-  .progress-fill {
-    height: 100%;
-    background-color: #1a73e8;
-  }
+.skills-section {
+  padding: 20px;
+  max-height: 400px; /* 必要に応じて調整 */
+  overflow-y: auto; /* 高さを超えた場合にスクロールを許可 */
+}
