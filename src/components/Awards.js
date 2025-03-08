@@ -2,21 +2,25 @@ import React from 'react';
 import '../styles/Awards.css';
 
 function Awards() {
-  const awards = [
-    'SICE Excellent Student Award [URL]',
-    'INTERACTION 2024 Excellent Paper Award [URL]',
-    'TOMAKOMAI CITY HACK 2022 Excellent Award [URL]',
-    'Hokkaido University Nitobe Award [URL]',
-  ];
-
   return (
     <section id="awards" className="awards-section">
       <h2>Awards</h2>
-      <ul>
-        {awards.map((award, index) => (
-          <li key={index}>{award}</li>
-        ))}
-      </ul>
+      <div className="award-category">
+        <h3>2024/03</h3>
+        <p>SICE優秀学生賞 <a href="https://www.sice.jp/act/awards/sice_student_award.html"><span className="url-text">[URL]</span></a></p>
+      </div>
+      <div className="award-category">
+        <h3>2024/03</h3>
+        <p>インタラクション 2024 優秀論文賞 <a href="https://www.interaction-ipsj.org/2024/award/"><span className="url-text">[URL]</span></a></p>
+      </div>
+      <div className="award-category">
+        <h3>2022/12</h3>
+        <p>TOMAKOMAI CITY HACK 2022 優秀賞 <a href="https://tch2022.mikan-foundation.org/"><span className="url-text">[URL]</span></a></p>
+      </div>
+      <div className="award-category">
+        <h3>2021/07</h3>
+        <p>北海道大学 新渡戸賞 <a href="https://www.hokudai.ac.jp/gakusei/campus-life/campus/incentive.html"><span className="url-text">[URL]</span></a></p>
+      </div>
     </section>
   );
 }
