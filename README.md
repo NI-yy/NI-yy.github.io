@@ -1,5 +1,5 @@
 # NI-yy Portforio Website
-https://ni-yy.github.io/Portforio-Website/
+https://ni-yy.github.io/
 
 ポートフォリオサイトです。Reactを使用してみました。
 
