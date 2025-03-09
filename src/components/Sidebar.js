@@ -88,11 +88,11 @@ const Sidebar = forwardRef(({ activeSection, isMenuOpen, toggleMenu }, ref) => {
           </ul>
         </nav>
         <div className="social_icons">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <img src={github_icon} alt="Github" className="linkedin-icon" />
+          <a href="https://github.com/NI-yy" target="_blank" rel="noopener noreferrer">
+            <img src={github_icon} alt="Github" className="github-icon" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <img src={x_icon} alt="X" className="linkedin-icon" />
+          <a href="https://x.com/yy88804046" target="_blank" rel="noopener noreferrer">
+            <img src={x_icon} alt="X" className="x-icon" />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <img src={linkedin_icon} alt="LinkedIn" className="linkedin-icon" />
