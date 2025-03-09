@@ -161,12 +161,12 @@ function Works() {
 
   return (
     <section id="works" className="works-section">
-      <Container maxWidth="lg">
+      <Container maxWidth={false}>
         <h2>Works</h2>
         <div className="works-container">
           <Grid container spacing={3}>
             {worksData.map((work, index) => (
-              <Grid item xs={12} md={6} key={index}>
+              <Grid item xs={12} md={6} lg={4} xl={3} key={index}>
                 <Card className="work-card">
                   <CardMedia
                     component="img"

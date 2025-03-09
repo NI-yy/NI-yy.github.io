@@ -12,6 +12,20 @@ import Burger from '@animated-burgers/burger-squeeze'
 // don't forget the styles
 import '@animated-burgers/burger-squeeze/dist/styles.css' 
 import './App.css';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+// カスタムブレークポイントを定義
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,    // 
+      sm: 500,  // 500px以上で適用
+      md: 800,  // 800px以上で適用
+      lg: 1920, 
+      xl: 2560,
+    },
+  },
+});
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
@@ -94,7 +108,9 @@ function App() {
             </section>
             <main>
               <section id="works" ref={(el) => (sectionRefs.current.works = el)}>
+              <ThemeProvider theme={theme}>
                 <Works />
+              </ThemeProvider>
               </section>
               <section id="skills" ref={(el) => (sectionRefs.current.skills = el)}>
                 <Skills />
