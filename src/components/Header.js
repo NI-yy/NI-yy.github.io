@@ -33,7 +33,7 @@ function Header() {
       </div>
       <div class="text-block-4">
       <text className="text-lg">
-      こんにちは、北海道大学 大学院情報科学院 修士1年の岩井望です。<br />
+      こんにちは、北海道大学 大学院情報科学院 修士2年の岩井望です。<br />
       y_yというユーザネームをよく使います。<br />
       <br />
       <a href="https://x.com/gamma_game_com" className="gamma-link">
