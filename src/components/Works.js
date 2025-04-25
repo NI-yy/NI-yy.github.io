@@ -11,12 +11,52 @@ import patchwork_space_escape from '../img/patchwork-space-escape.png';
 import junk_alchemist from '../img/junkalchemist.png';
 import furufuru_gamman_splash from '../img/furufuru-gamman-splash.png';
 import visity from '../img/Visity.png';
+import bonsai from '../img/bonsai.png';
+import hello_dash from '../img/HelloDash.png';
 import '../styles/Works.css';
 import github_icon from '../img/github-icon.png';
 import game_icon from '../img/game-icon.png';
 
 function Works() {
   const worksData = [
+    {
+      title: 'HelloDash!',
+      lines: [
+        'unity1week「あい」投稿作品',
+        'タイミングよく挨拶をしていくランゲーム',
+        '', // 空白行
+        '共同制作',
+        'Unity, C#',
+      ],
+      image: hello_dash,
+      chips: [
+        {
+          label: 'UnityRoom',
+          href: 'https://unityroom.com/games/hello_dash',
+          icon: game_icon,
+        },
+        {
+          label: 'Github',
+          href: 'https://github.com/NI-yy/Unity1WeekGameJam_AI',
+          icon: github_icon,
+        },
+      ],
+    },
+    {
+      title: 'BONSAI',
+      lines: [
+        'Apple Vision Proハッカソン参加作品',
+        'Gitbhubの作業履歴を盆栽として可視化し、ユーザのモチベーション向上を目的として制作したプロダクト',
+        '', // 空白行
+        '2位受賞(14チーム中)',
+        '共同制作',
+        'Unity, C# (Apple Vision Pro)',
+      ],
+      image: bonsai,
+      chips: [
+
+      ],
+    },
     {
       title: 'つぎはぎエスケープ',
       lines: [
