@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.683c2d92.css",
-    "main.js": "/static/js/main.129d16e2.js",
+    "main.js": "/static/js/main.6dd536bf.js",
     "static/media/check-in-dash.png": "/static/media/check-in-dash.fab515e75f07a7201f80.png",
     "static/media/furufuru-gamman-splash.png": "/static/media/furufuru-gamman-splash.fc5777309b1c5c4ceb0f.png",
     "static/media/patchwork-space-escape.png": "/static/media/patchwork-space-escape.d17c8f8098443ab6302c.png",
+    "static/media/AR_character.png": "/static/media/AR_character.2652d3b34f1c792952f8.png",
     "static/media/rocket-punch.png": "/static/media/rocket-punch.94cb2f7fb4dc58177b5e.png",
     "static/media/kick-pop-send.png": "/static/media/kick-pop-send.db97106aa0785fc8cdc7.png",
     "static/media/junkalchemist.png": "/static/media/junkalchemist.b30ed7a630176e2ae440.png",
@@ -16,10 +17,10 @@
     "static/media/linkedin-icon.png": "/static/media/linkedin-icon.85f850a54081a1da6c97.png",
     "index.html": "/index.html",
     "main.683c2d92.css.map": "/static/css/main.683c2d92.css.map",
-    "main.129d16e2.js.map": "/static/js/main.129d16e2.js.map"
+    "main.6dd536bf.js.map": "/static/js/main.6dd536bf.js.map"
   },
   "entrypoints": [
     "static/css/main.683c2d92.css",
-    "static/js/main.129d16e2.js"
+    "static/js/main.6dd536bf.js"
   ]
 }
