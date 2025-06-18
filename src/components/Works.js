@@ -22,7 +22,7 @@ import webpage_icon from '../img/webpage-icon.png';
 function Works() {
   const worksData = [
     {
-      title: 'Preferred Networks 夏期インターンシップおしゃべりARキャラクター',
+      title: 'Preferred Networks 夏期インターンシップ おしゃべりARキャラクター',
       lines: [
         '株式会社Preferred Networks 2024年夏期インターンシップ成果物',
         '',
