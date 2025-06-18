@@ -13,12 +13,33 @@ import furufuru_gamman_splash from '../img/furufuru-gamman-splash.png';
 import visity from '../img/Visity.png';
 import bonsai from '../img/bonsai.png';
 import hello_dash from '../img/HelloDash.png';
+import ar_character from '../img/AR_character.png';
 import '../styles/Works.css';
 import github_icon from '../img/github-icon.png';
 import game_icon from '../img/game-icon.png';
+import webpage_icon from '../img/webpage-icon.png';
 
 function Works() {
   const worksData = [
+    {
+      title: 'Preferred Networks 夏期インターンシップおしゃべりARキャラクター',
+      lines: [
+        '株式会社Preferred Networks 2024年夏期インターンシップ成果物',
+        '',
+        'ARとAIを用いてあらゆる物体を喋るキャラクターにするプロダクト.',
+        'その物体の特性を反映した性格を持ち、ユーザの発話・行動・環境に応答する(CHI 2025 LBWにて発表).', // 空白行
+        '',
+        'Unity, C#',
+      ],
+      image: ar_character,
+      chips: [
+        {
+          label: 'Project Page',
+          href: 'https://tech.preferred.jp/ja/blog/%e3%81%8a%e3%81%97%e3%82%83%e3%81%b9%e3%82%8aar%e3%82%ad%e3%83%a3%e3%83%a9%e3%82%af%e3%82%bf%e3%83%bc/',
+          icon: webpage_icon,
+        }
+      ],
+    },
     {
       title: 'HelloDash!',
       lines: [
