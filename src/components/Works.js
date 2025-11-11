@@ -14,6 +14,8 @@ import visity from '../img/Visity.png';
 import bonsai from '../img/bonsai.png';
 import hello_dash from '../img/HelloDash.png';
 import ar_character from '../img/AR_character.png';
+import sugosuba from '../img/sugosuba.png';
+import ashiart from '../img/AshiArt.jpg';
 import '../styles/Works.css';
 import github_icon from '../img/github-icon.png';
 import game_icon from '../img/game-icon.png';
@@ -21,6 +23,52 @@ import webpage_icon from '../img/webpage-icon.png';
 
 function Works() {
   const worksData = [
+    {
+      title: 'AhiArt',
+      lines: [
+        'JPHACKS 2025 Best Hack Award受賞作品',
+        '一筆書きで描いた絵から独自のアルゴリズムで実際に走れる最適なコースを設計し、GPS アートによる、いつもと違ったランニング体験を提供する',
+        '', // 空白行
+        'Best Hack Award, Best Audience Award, スポンサー賞(ディップ株式会社, ロート製薬株式会社, ロート製薬株式会社)受賞. イノベーター認定作品',
+        ''
+      ],
+      image: ashiart,
+      chips: [
+        {
+          label: 'Product Page',
+          href: 'https://ashiart.vercel.app/home',
+          icon: webpage_icon,
+        },
+        {
+          label: 'Github',
+          href: 'https://github.com/jphacks/sp_2509',
+          icon: github_icon,
+        },
+      ],
+    },
+    {
+      title: 'すごいすばやいすぴーど',
+      lines: [
+        'unity1week「ひく」投稿作品',
+        '急降下からの地表すれすれの"低"空飛行でスコアを稼ぐアクションランゲーム',
+        '', // 空白行
+        '共同制作',
+        'Unity, C#',
+      ],
+      image: sugosuba,
+      chips: [
+        {
+          label: 'UnityRoom',
+          href: 'https://unityroom.com/games/sugosuba',
+          icon: game_icon,
+        },
+        {
+          label: 'Github',
+          href: 'https://github.com/Gamma-HU/u1w_gliding',
+          icon: github_icon,
+        },
+      ],
+    },
     {
       title: 'Preferred Networks 夏期インターンシップ おしゃべりARキャラクター',
       lines: [
