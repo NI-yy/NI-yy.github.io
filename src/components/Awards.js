@@ -6,6 +6,10 @@ function Awards() {
     <section id="awards" className="awards-section">
       <h2>Awards</h2>
       <div className="award-category">
+        <h3>2025/11</h3>
+        <p>JPHACKS 2025 Best Hack Award, Best Audience Award 受賞</p>
+      </div>
+      <div className="award-category">
         <h3>2024/03</h3>
         <p>SICE優秀学生賞 <a href="https://www.sice.jp/act/awards/sice_student_award.html"><span className="url-text">[URL]</span></a></p>
       </div>
