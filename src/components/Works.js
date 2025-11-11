@@ -29,7 +29,7 @@ function Works() {
         'JPHACKS 2025 Best Hack Award受賞作品',
         '一筆書きで描いた絵から独自のアルゴリズムで実際に走れる最適なコースを設計し、GPS アートによる、いつもと違ったランニング体験を提供する',
         '', // 空白行
-        'Best Hack Award, Best Audience Award, スポンサー賞(ディップ株式会社, ロート製薬株式会社, ロート製薬株式会社)受賞. イノベーター認定作品',
+        'Best Hack Award, Best Audience Award, スポンサー賞(ディップ株式会社, ロート製薬株式会社, 三菱重工業株式会社)受賞',
         ''
       ],
       image: ashiart,
