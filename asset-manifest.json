@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.683c2d92.css",
-    "main.js": "/static/js/main.bbd11e1d.js",
+    "main.js": "/static/js/main.4419c688.js",
     "static/media/check-in-dash.png": "/static/media/check-in-dash.fab515e75f07a7201f80.png",
     "static/media/furufuru-gamman-splash.png": "/static/media/furufuru-gamman-splash.fc5777309b1c5c4ceb0f.png",
     "static/media/patchwork-space-escape.png": "/static/media/patchwork-space-escape.d17c8f8098443ab6302c.png",
@@ -9,7 +9,9 @@
     "static/media/rocket-punch.png": "/static/media/rocket-punch.94cb2f7fb4dc58177b5e.png",
     "static/media/kick-pop-send.png": "/static/media/kick-pop-send.db97106aa0785fc8cdc7.png",
     "static/media/junkalchemist.png": "/static/media/junkalchemist.b30ed7a630176e2ae440.png",
+    "static/media/sugosuba.png": "/static/media/sugosuba.86ed98d2e67141d9569e.png",
     "static/media/Visity.png": "/static/media/Visity.5513e92b931951d43871.png",
+    "static/media/AshiArt.jpg": "/static/media/AshiArt.a1720b8392219b2f9a82.jpg",
     "static/media/HelloDash.png": "/static/media/HelloDash.f1d813528c90e26a8d1e.png",
     "static/media/panda-logo.png": "/static/media/panda-logo.490abf814b4728bf95d2.png",
     "static/media/bonsai.png": "/static/media/bonsai.1e702a1b56395e36d601.png",
@@ -17,10 +19,10 @@
     "static/media/linkedin-icon.png": "/static/media/linkedin-icon.85f850a54081a1da6c97.png",
     "index.html": "/index.html",
     "main.683c2d92.css.map": "/static/css/main.683c2d92.css.map",
-    "main.bbd11e1d.js.map": "/static/js/main.bbd11e1d.js.map"
+    "main.4419c688.js.map": "/static/js/main.4419c688.js.map"
   },
   "entrypoints": [
     "static/css/main.683c2d92.css",
-    "static/js/main.bbd11e1d.js"
+    "static/js/main.4419c688.js"
   ]
 }
