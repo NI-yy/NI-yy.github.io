@@ -292,7 +292,12 @@ function Works() {
                       line === '' ? (
                         <Box key={lineIndex} sx={{ height: '1em' }} />
                       ) : (
-                        <Typography key={lineIndex} variant="body2" color="text.secondary">
+                        <Typography
+                          key={lineIndex}
+                          variant="body2"
+                          color="text.secondary"
+                          sx={line === 'JPHACKS 2025 Best Hack Award受賞作品' ? { fontWeight: 'bold' } : {}}
+                        >
                           {line}
                         </Typography>
                       )
