@@ -59,7 +59,7 @@ function Works() {
       chips: [
         {
           label: 'UnityRoom',
-          href: 'https://unityroom.com/games/sugosuba',
+          href: 'https://unityroom.com/games/low_altitude_flight',
           icon: game_icon,
         },
         {
@@ -292,7 +292,12 @@ function Works() {
                       line === '' ? (
                         <Box key={lineIndex} sx={{ height: '1em' }} />
                       ) : (
-                        <Typography key={lineIndex} variant="body2" color="text.secondary">
+                        <Typography
+                          key={lineIndex}
+                          variant="body2"
+                          color="text.secondary"
+                          sx={line === 'JPHACKS 2025 Best Hack Award受賞作品' ? { fontWeight: 'bold' } : {}}
+                        >
                           {line}
                         </Typography>
                       )
