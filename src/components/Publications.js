@@ -11,9 +11,9 @@ function Publications() {
       </div>
       <div className="publication-category">
         <h3>Refereed Domestic Conference</h3>
-        <p>1. <span className="underline-name">岩井 望</span>, 阿部 優樹, 坂本 大介. 効率的な遠距離オブジェクトの回転操作を可能とするトラックボール型VRコントローラ. WISS 2025. 第33回インタラクティブシステムとソフトウェアに関するワークショップ.
+        <p>1. <span className="underline-name">岩井 望</span>, 阿部 優樹, 坂本 大介. 効率的な遠距離オブジェクトの回転操作を可能とするトラックボール型VRコントローラ. WISS 2025. 第33回インタラクティブシステムとソフトウェアに関するワークショップ. <a href="https://www.wiss.org/WISS2025Proceedings/data/paper/16.pdf"><span className="url-text">[URL]</span></a>
         </p>
-        <p>2. <span className="underline-name">岩井 望</span>, 崔 明根, 坂本 大介, 小野哲夫. AR入力デバイスとしての身体装着型トラックボールの検討. インタラクション2024 情報処理学会.
+        <p>2. <span className="underline-name">岩井 望</span>, 崔 明根, 坂本 大介, 小野哲夫. AR入力デバイスとしての身体装着型トラックボールの検討. インタラクション2024 情報処理学会. <a href="https://www.interaction-ipsj.org/proceedings/2024/data/bib/INT24008.html"><span className="url-text">[URL]</span></a>
         </p>
       </div>
     </section>
