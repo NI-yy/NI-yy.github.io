@@ -47,7 +47,6 @@ function Header() {
       アクションゲームとストーリー重視のゲームが好きです。<br />
       またアニメを見ることが好きで、web系アニメーターの方々の作画を見るのが好きです。<br />
       <br />
-      Email: 	iwai.nozomu.r5[@]elms.hokudai.ac.jp<br />
       </text>
       </div>
     </section>
