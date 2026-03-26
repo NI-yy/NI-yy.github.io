@@ -19,6 +19,7 @@ function History() {
     { date: '2020/04', icon: 'cap', text: '北海道大学入学 総合理系 入学' },
     { date: '2024/03', icon: 'cap', text: '北海道大学 工学部 情報エレクトロニクス学科 卒業' },
     { date: '2024/04', icon: 'cap', text: '北海道大学 大学院情報科学院 情報理工学専攻 入学' },
+    { date: '2026/03', icon: 'cap', text: '北海道大学 大学院情報科学院 情報理工学専攻 修了' },
   ];
 
   return (
