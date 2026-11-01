@@ -1,4 +1,4 @@
-# ポートフォリオサイト
+# NI-yy Portfolio Website
 
 https://ni-yy.github.io/
 
