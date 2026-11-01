@@ -1,38 +1,6 @@
-# Graphics Portfolio Lab
+# ポートフォリオサイト
+
 https://ni-yy.github.io/
 
-
-イチョウ並木の風景を Babylon.js で描く、独立したポートフォリオです。
-元サイトの自己紹介・作品・研究・経歴を保ち、全画面の描画背景に重ねています。
-
-## 背景
-
-- イチョウ: 一本道の両脇に続く並木を見上げる構図。手続き的な枝と葉に、生成した葉・樹皮の素材を貼り、葉ごとの色、透過光、風による揺れをシェーダーで描画します。輪郭には FXAA と高めの描画解像度を使います。写真そのものは背景に使用していません。
-- 「景色を見る」で本文を隠し、ドラッグで視点を変更できます。Escape で本文に戻れます。
-- 動きの停止、OS の動きを減らす設定、非表示タブでの描画停止に対応しています。
 - `?culling-demo=1` を付けると、破線の内側だけを描画するカリング確認モードを開けます。描画対象メッシュ数も表示します。
 - `Alt + Shift + P` で描画性能パネルを表示・非表示にできます。実測 FPS、フレーム間隔の 95 パーセンタイル、CPU 側の描画処理時間、表示中の樹木メッシュ数、描画解像度を約 1 秒ごとに表示します。
-- 樹木の葉は空間ごとに分割し、カメラ外のまとまりをカリングします。性能パネルでは描画対象の樹木三角形数も確認できます。
-
-```sh
-npm ci --legacy-peer-deps
-npm start
-npm run build
-```
-
-背景の管理は `src/createLandscape.js`、イチョウの生成は `src/createGinkgoScene.js`、
-UI は `src/components/LandscapeHero.js` にあります。Babylon.js は遅延読み込みします。
-Skills のアイコンは [Devicon](https://github.com/devicons/devicon) の SVG を使用しています（MIT License、`public/skills/LICENSE-devicon`）。
-`npm run deploy` で GitHub Pages の `gh-pages` ブランチに公開します。
-
-## Library used
-
-- [React Simple Typewriter](https://www.npmjs.com/package/react-simple-typewriter)
-- [Material UI - Card](https://mui.com/material-ui/react-card/)
-- [react-chartjs-2](https://react-chartjs-2.js.org/)
-- [Material UI - Timeline](https://mui.com/material-ui/react-timeline/)
-
-## References
-
-- [Manuel Ernesto Garcia | Website](https://manuelernestog.github.io/)
-- [ノグチデザイン(X)](https://x.com/n_seitan)
