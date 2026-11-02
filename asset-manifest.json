@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.7ca37a9c.css",
+    "main.css": "/static/css/main.dcdde262.css",
     "main.js": "/static/js/main.dc9856bf.js",
     "static/js/651.59052da1.chunk.js": "/static/js/651.59052da1.chunk.js",
     "static/js/924.501b8286.chunk.js": "/static/js/924.501b8286.chunk.js",
@@ -40,7 +40,7 @@
     "static/media/panda-logo.png": "/static/media/panda-logo.490abf814b4728bf95d2.png",
     "static/media/bonsai.png": "/static/media/bonsai.1e702a1b56395e36d601.png",
     "index.html": "/index.html",
-    "main.7ca37a9c.css.map": "/static/css/main.7ca37a9c.css.map",
+    "main.dcdde262.css.map": "/static/css/main.dcdde262.css.map",
     "main.dc9856bf.js.map": "/static/js/main.dc9856bf.js.map",
     "651.59052da1.chunk.js.map": "/static/js/651.59052da1.chunk.js.map",
     "924.501b8286.chunk.js.map": "/static/js/924.501b8286.chunk.js.map",
@@ -68,7 +68,7 @@
     "119.cada9ba7.chunk.js.map": "/static/js/119.cada9ba7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ca37a9c.css",
+    "static/css/main.dcdde262.css",
     "static/js/main.dc9856bf.js"
   ]
 }
