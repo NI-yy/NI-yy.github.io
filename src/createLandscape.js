@@ -14,6 +14,7 @@ export function createLandscape(canvas, { onCullingChange, onStatsChange } = {})
   let active = true, pointer = null, paused = false, sceneOnly = false, cullingDemo = false, elapsed = 0;
   let lastCullingCount = null;
   let lastRenderTime = -Infinity, needsRender = true;
+  let resizePending = false;
   let sampleStart = performance.now(), sampledFrames = 0;
   let statsEnabled = false, statsStart = performance.now(), statsFrames = 0;
   let statsLastFrame = null;
@@ -26,8 +27,7 @@ export function createLandscape(canvas, { onCullingChange, onStatsChange } = {})
   const observer = new IntersectionObserver(([entry]) => { active = entry.isIntersecting; }, { threshold: 0.01 });
   observer.observe(canvas);
   const onResize = () => {
-    pixelRatio = Math.min(pixelRatio, maxPixelRatio());
-    engine.setHardwareScalingLevel(1 / pixelRatio);
+    resizePending = true;
     needsRender = true;
   };
   const onPointerDown = (event) => { canvas.setPointerCapture(event.pointerId); pointer = { x: event.clientX, y: event.clientY }; };
@@ -57,6 +57,14 @@ export function createLandscape(canvas, { onCullingChange, onStatsChange } = {})
       return;
     }
     const staticFrame = paused || reducedMotion;
+    // Resize clears the drawing buffer. Apply it immediately before rendering,
+    // so the browser never presents a resized but empty canvas.
+    const resized = resizePending;
+    if (resized) {
+      resizePending = false;
+      pixelRatio = Math.min(pixelRatio, maxPixelRatio());
+      engine.setHardwareScalingLevel(1 / pixelRatio);
+    }
     if (staticFrame && !needsRender) {
       sampleStart = now;
       sampledFrames = 0;
@@ -64,7 +72,7 @@ export function createLandscape(canvas, { onCullingChange, onStatsChange } = {})
       return;
     }
     const targetFps = sceneOnly ? 60 : 30;
-    if (now - lastRenderTime < 1000 / targetFps - 1) return;
+    if (!resized && now - lastRenderTime < 1000 / targetFps - 1) return;
     if (!staticFrame && lastRenderTime !== -Infinity) elapsed += Math.min(now - lastRenderTime, 100) * .001;
     lastRenderTime = now;
     needsRender = false;
@@ -109,7 +117,7 @@ export function createLandscape(canvas, { onCullingChange, onStatsChange } = {})
         const previousRatio = pixelRatio;
         if (fps < targetFps * .7) pixelRatio = Math.max(1, pixelRatio - .125);
         else if (fps > targetFps * .9) pixelRatio = Math.min(limit, pixelRatio + .125);
-        if (pixelRatio !== previousRatio) engine.setHardwareScalingLevel(1 / pixelRatio);
+        if (pixelRatio !== previousRatio) onResize();
         sampleStart = now;
         sampledFrames = 0;
       }
