@@ -30,12 +30,13 @@ export function createLandscape(canvas, { onCullingChange, onStatsChange } = {})
     resizePending = true;
     needsRender = true;
   };
-  const onPointerDown = (event) => { canvas.setPointerCapture(event.pointerId); pointer = { x: event.clientX, y: event.clientY }; };
+  const onPointerDown = (event) => { canvas.setPointerCapture(event.pointerId); pointer = { x: event.clientX, y: event.clientY, direction: event.pointerType === 'touch' ? -1 : 1 }; };
   const onPointerMove = (event) => {
     if (!pointer) return;
-    look.x = Math.max(-1, Math.min(1, look.x + (event.clientX - pointer.x) / 650));
-    look.y = Math.max(-1, Math.min(1, look.y + (event.clientY - pointer.y) / 650));
-    pointer = { x: event.clientX, y: event.clientY };
+    look.x = Math.max(-1, Math.min(1, look.x + pointer.direction * (event.clientX - pointer.x) / 650));
+    look.y = Math.max(-1, Math.min(1, look.y + pointer.direction * (event.clientY - pointer.y) / 650));
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
     needsRender = true;
   };
   const onPointerUp = () => { pointer = null; };
