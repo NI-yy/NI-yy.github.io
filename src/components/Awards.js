@@ -26,10 +26,6 @@ function Awards() {
         <p>インタラクション 2024 優秀論文賞 <a href="https://www.interaction-ipsj.org/2024/award/"><span className="url-text">[URL]</span></a></p>
       </div>
       <div className="award-category">
-        <h3>2022/12</h3>
-        <p>TOMAKOMAI CITY HACK 2022 優秀賞 <a href="https://tch2022.mikan-foundation.org/"><span className="url-text">[URL]</span></a></p>
-      </div>
-      <div className="award-category">
         <h3>2021/07</h3>
         <p>北海道大学 新渡戸賞 <a href="https://www.hokudai.ac.jp/gakusei/campus-life/campus/incentive.html"><span className="url-text">[URL]</span></a></p>
       </div>
